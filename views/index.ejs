@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div>
+       <% if (!user) { %>
+      	<p>Welcome! Please <a href="/login/facebook">log in with facebook</a>.</p>
+      <% } else { %>
+      	<p>Hello, <%= user.displayName %>. View your <a href="/profile">profile</a>.</p>
+      <% } %>
+    </div>
+  </body>
+</html>
